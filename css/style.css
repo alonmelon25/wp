@@ -1,0 +1,176 @@
+body{
+	font-family: 'Lato';
+	background-color: #203146;
+	background-image: url("images/logo_blue.png");
+	color: white;
+	size: 150%;
+	margin: 5%;
+}
+
+h1{
+	font-family: 'Lato';
+	font-size: 48px;
+	text-align: center;
+}
+
+h2{
+	color: red;
+	font-family: 'Lato';
+	font-size: 36px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+h3{
+	font-family: 'Lato';
+	font-size: 24px;
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.skip{
+	color: white;
+	position: absolute;
+	overflow: hidden;
+	left: -9999px;
+	z-index: -999;
+}
+
+.skip:focus{
+	position: relative;
+	left: 0px;
+}
+
+/* Desktop nav
+.nav{
+	display: flex;
+} */
+
+/* Mobile nav */
+/* .nav li{
+	border: 1px solid white;
+} */
+
+.nav a{
+	display: block;
+	color: white;
+	background: #203146;
+	text-align: center;
+	font-size: 150%;
+	padding: 10px;
+	text-decoration: none;
+}
+
+.nav a:hover{
+	background-color: #d90303;
+}
+
+.nav li:first-child{
+	margin-right: auto;
+}
+
+.nav .nav_logo{
+	height: 40px;
+	width: 40px;
+}
+
+.nav a.current{
+	text-decoration: underline;
+}
+
+.home_logo{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+p{
+	font-family: 'Lato';
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.social_media{
+	text-align: center;
+}
+
+.social_media li{
+	display: inline;
+	padding: 5px;
+}
+
+.social_media .social_media_logo{
+	color: white;
+}
+
+.container{
+	display: grid;
+	flex-wrap: wrap;
+	grid-template-columns: auto auto auto;
+	justify-content: center;
+	align-items: center;
+}
+
+.container img{
+	height: 250px;
+	width: 250px;
+}
+
+iframe{
+	height: 450px;
+	width: 100%;
+}
+
+.menu h3{
+	text-align: center;
+	padding-right: 30px;
+}
+
+.menu p{
+	text-align: justify;
+	padding-left: 30px;
+}
+
+.items{
+	display: grid;
+	grid-template-columns: 1fr 1fr 2fr;
+}
+
+@media screen and (orientation: portrait){
+	.menu p{
+		text-align: left;
+	}
+}
+
+@media screen and (min-width: 700px){
+	.skip{
+		padding: 6px;
+		position: absolute;
+		top: -40px;
+		left: 0px;
+		color: white;
+		border-left: 1px solid white;
+		border-right: 1px solid white;
+		border-top: 1px solid white;
+		border-bottom: 1px solid white;
+		/* border-bottom-right-radius: 8px; */
+		background: #d90303;
+	  z-index: 100;
+	}
+
+	.skip:focus{
+		position: relative;
+		left: 0px;
+	}
+}
+
+@media screen and (min-width: 1000px){
+	nav ul{
+		display: flex;
+		justify-content: flex-end;
+	}
+	nav ul li{
+		display: inline-block;
+		background: #203146;
+	}
+}
