@@ -2,14 +2,17 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <link href="css/lightbox.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <title>Gallery</title>
   </head>
-
   <body>
     <a href= "#main" class= "skip">Skip to Content</a>
     <header>
@@ -21,26 +24,41 @@
           <li><a href='menu.html'>Menu</a></li>
           <li><a href='gallery.html' class= "current">Gallery</a></li>
         </ul>
+        <div class= "container-hamburger" onclick="myFunction(this)">
+          <div class= "bar1"></div>
+          <div class= "bar2"></div>
+          <div class= "bar3"></div>
+        </div>
       </nav>
+      <script src="js/toggle.js"></script>
+      <script src="js/sticky.js"></script>
       <br>
       <h1>Gallery</h1>
       <br>
     </header>
+    <!-- <script>
+      alert("hi");
+      console.log("Hi there");
+    </script> -->
     <main id= "main">
       <p>Some top images of the food and ambiance taken by employees from Wild Poke.</p>
       <div class= "container">
-        <img src= "images/bibimbop.jpg" alt= "bibimbop">
-        <img src= "images/cali.jpg" alt= "cali">
-        <img src= "images/spicytuna.jpg" alt= "spicytuna">
-        <img src= "images/2protein.jpg" alt= "2p">
-        <img src= "images/bibimbop_catering.jpg" alt= "bibimbop_catering">
-        <img src= "images/cali_customized.jpg" alt= "cali_customized">
-        <img src= "images/1protein.jpg" alt= "1p">
-        <img src= "images/closeup.jpg" alt= "closeup">
-        <img src= "images/mickey.jpg" alt= "3_bowls">
+        <a href= "images/bibimbop_25.jpg" data-lightbox= "images" data-title= "Bibimbop" data-alt= "bibimbop"><img src= "images/bibimbop_25.jpg" alt= "bibimbop"></a>
+        <a href= "images/3color_25.jpg" data-lightbox= "images" data-title= "Spicy Pork" data-alt= "3color"><img src= "images/3color_25.jpg" alt= "3color"></a>
+        <a href= "images/spicytuna_25.jpg" data-lightbox= "images" data-title= "Spicy Tuna" data-alt= "spicytuna"><img src= "images/spicytuna_25.jpg" alt= "spicytuna"></a>
+        <a href= "images/5protein_25.jpg" data-lightbox= "images" data-title= "5 Protein Bowl" data-alt= "5p"><img src= "images/5protein_25.jpg" alt= "5p"></a>
+        <a href= "images/bibimbop_catering_25.jpg" data-lightbox= "images" data-title= "Bibimbop Catering" data-alt= "bibimbop_catering"><img src= "images/bibimbop_catering_25.jpg" alt= "bibimbop_catering"></a>
+        <a href= "images/cali_customized_25.jpg" data-lightbox= "images" data-title= "California Bowl" data-alt= "cali_customized"><img src= "images/cali_customized_25.jpg" alt= "cali_customized"></a>
+        <a href= "images/1protein_25.jpg" data-lightbox= "images" data-title= "1 Protein Bowl" data-alt= "1p"><img src= "images/1protein_25.jpg" alt= "1p"></a>
+        <a href= "images/closeup_25.jpg" data-lightbox= "images" data-title= "Closeup" data-alt= "closeup"><img src= "images/closeup_25.jpg" alt= "closeup"></a>
+        <a href= "images/mickey_25.jpg" data-lightbox= "images" data-title= "Bowl & Snack Cups" data-alt= "3_bowls"><img src= "images/mickey_25.jpg" alt= "3_bowls"></a>
       </div>
     </main>
     <br>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/web-animations/2.3.1/web-animations.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="https://unpkg.com/muuri@0.6.3/dist/muuri.min.js"></script>
+    <script src="js/lightbox.js"></script>
     <footer>
       <ul class= "social_media">
         <li><a href= 'https://www.facebook.com/eatwildpoke/' aria-label= 'facebook'><i class="fab fa-facebook fa-3x social_media_logo"></i></a></li>

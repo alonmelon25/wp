@@ -2,9 +2,10 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <title>Welcome</title>
@@ -13,26 +14,45 @@
     <a href= "#main" class= "skip">Skip to Content</a>
     <header>
       <nav>
-        <ul class= "nav">
+        <ul class= "nav" id= "navbar">
           <li><a href='index.html'><img src= "images/logo_white.png" alt= "nav_logo" class= "nav_logo"></a></li>
-          <li><a href='index.html' class= "current">Welcome</a></li>
-          <li><a href='about.html'>About</a></li>
-          <li><a href='menu.html'>Menu</a></li>
-          <li><a href='gallery.html'>Gallery</a></li>
+          <div id= "links">
+            <li><a href='index.html' class= "current">Welcome</a></li>
+            <li><a href='about.html'>About</a></li>
+            <li><a href='menu.html'>Menu</a></li>
+            <li><a href='gallery.html'>Gallery</a></li>
+          </div>
         </ul>
+        <div class= "container-hamburger" onclick="myFunction(this)">
+          <div class= "bar1"></div>
+          <div class= "bar2"></div>
+          <div class= "bar3"></div>
+        </div>
       </nav>
+      <script src="js/toggle.js"></script>
+      <script src="js/sticky.js"></script>
       <br>
-      <h1>Welcome to Wild Poké!</h1>
+      <h1>Welcome!</h1>
       <br>
     </header>
     <main id= "main">
-      <img src= 'images/logo_blue.png' alt= 'logo' class= 'home_logo'>
-      <br>
-      <div>
-        <p>Let's get wild!</p>
+      <div class= "flip-card">
+        <div class= "flip-card-inner">
+          <div class= "flip-card-front">
+            <img src= 'images/logo_blue.png' alt= 'logo' class= 'home_logo'>
+          </div>
+          <div class= "flip-card-back">
+            <h2>Let's get wild!</h2>
+          </div>
+        </div>
       </div>
-      <br>
-      <p>Hip and casual spot for Hawaiian Poké that features many Asian fusion entrees as well as teas & smoothies.</p>
+      <div class= "callout">
+        <div class= "callout-header">Lunch Specials!</div>
+        <span class= "close-button" onclick= "this.parentElement.style.display='none';">×</span>
+        <div class= "callout-container">
+          <p>Monday to Friday from 11:00am to 3:00pm. Order any bowl and get a free side!</p>
+        </div>
+      </div>
     </main>
     <br>
     <footer>

@@ -2,35 +2,87 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 
     <title>About</title>
   </head>
-
   <body>
     <a href= "#main" class= "skip">Skip to Content</a>
     <header>
       <nav>
-        <ul class= "nav">
+        <ul class= "nav" id= "navbar">
           <li><a href='index.html'><img src= "images/logo_white.png" alt= "nav_logo" class= "nav_logo"></a></li>
-          <li><a href='index.html'>Welcome</a></li>
-          <li><a href='about.html' class= "current">About</a></li>
-          <li><a href='menu.html'>Menu</a></li>
-          <li><a href='gallery.html'>Gallery</a></li>
+          <div id= "links">
+            <li><a href='index.html'>Welcome</a></li>
+            <li><a href='about.html' class= "current">About</a></li>
+            <li><a href='menu.html'>Menu</a></li>
+            <li><a href='gallery.html'>Gallery</a></li>
+          </div>
         </ul>
+        <div class= "container-hamburger" onclick="myFunction(this)">
+          <div class= "bar1"></div>
+          <div class= "bar2"></div>
+          <div class= "bar3"></div>
+        </div>
       </nav>
+      <script src="js/toggle.js"></script>
+      <script src="js/sticky.js"></script>
       <br>
       <h1>About</h1>
       <br>
     </header>
     <main id= "main">
-      <p>Wild Poké offers tasty Asian fusion eats, from nutritious bowls and wraps to affordable side dishes and lunch specials, as well as teas and fruit smoothies.</p>
-      <p>We also partnered up with GRUBHUB, EatStreet, SnackPass, and DoorDash, so that it can be delivered to your home too.</p>
+      <button class= "accordion">What is Poké?</button>
+      <div class= "panel">
+        <p>Originally from Hawaii, poké means to slice or to cut crosswise into pieces. At its essence, it is diced and seasoned raw fish served as either an appetizer or part of a main course. Traditional forms include "aku"(oily tuna), and "he'e"(octopus). The most popular ahi poké is generally made with yellowfin tuna. Adaptations may feature raw salmon or various shellfish as main ingredients served raw with common poké seasoning.</p>
+      </div>
+      <button class= "accordion">What is Wild Poké?</button>
+      <div class= "panel">
+        <p>Wild Poké is a hip and casual spot that offers tasty Asian fusion eats, from nutritious bowls and wraps to affordable side dishes, lunch specials, as well as teas and fruit smoothies.</p>
+      </div>
+      <button class= "accordion">Food Delivery Services</button>
+      <div class= "panel">
+        <p>Too far? Not a problem. We partnered up with GRUBHUB, EatStreet, SnackPass, and DoorDash, so your food can be delivered to anywhere you desire.</p>
+      </div>
+      <script src="js/accordion.js"></script>
+      <br>
       <h2>Location</h2>
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2951.858492771777!2d-83.7454266851371!3d42.28154394804998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x883caf6017324f31%3A0x79babeb65c56c131!2sWild+Pok%C3%A9!5e0!3m2!1sen!2sus!4v1549467973092" title="Wild Poké Map" lang="en" allowfullscreen></iframe>
+      <br>
+      <h2>Contact Us</h2>
+      <form name="Contact" class="contact" action="https://formspree.io/proaaron.714@gmail.com" method="POST">
+        <fieldset>
+      		<ol>
+      			<li>
+      				<label for="fname">First Name: </label>
+      				<input id="fname" name="fname" type="text" placeholder="First name" class="name" required>
+      			</li>
+            <li>
+      				<label for="lname">Last Name: </label>
+      				<input id="lname" name="lname" type="text" placeholder="Last name" class="name" required>
+      			</li>
+      			<li>
+      				<label for="email">Email: </label>
+      				<input id="email" name="email" type="email" placeholder="example@domain.com" class="email" required>
+      			</li>
+            <li>
+              <label for="subject">Subject: </label>
+              <input id="subject" name="subject" type="text" class="subject" placeholder="" required>
+            </li>
+            <li>
+              <label for="message">Message: </label>
+              <input id="message" name="message" type="text" class="message" placeholder="" required>
+            </li>
+      			<li>
+              <input type="submit" value="Submit">
+      			</li>
+      		</ol>
+      	</fieldset>
+      </form>
     </main>
     <footer>
       <ul class= "social_media">
