@@ -75,9 +75,9 @@ p{
 }
 
 .sticky{
-  position: fixed;
-  top: 0;
-  width: 93%;
+	position: fixed;
+	top: 0;
+	width: 93%;
 }
 
 .nav a{
@@ -111,14 +111,21 @@ p{
 }
 
 .nav_mobile{
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   align-items: center;
 	justify-content: center;
+	position: fixed; */
+	background-color: var(--background-color);
+	align-items: center;
+	display: flex;
+	justify-content: center;
+	/* margin: 0 auto; */
+	width: 90%;
 	position: fixed;
-	left: 0;
-	top: 0;
-	z-index: 1;
+	/* left: 0;
+	top: 0; */
+	/* z-index: 1; */
 	/* background: var(--background_color);
 	transition-duration: .3s;
 	opacity: 0.9;
@@ -389,11 +396,14 @@ label{
 	}
 	.nav{
 		overflow: hidden;
-		background-color: var(--background-color)
+		background-color: var(--background-color);
 		position: relative;
 	}
 	.nav #links{
 		display: none;
+	}
+	.nav #links a:hover{
+		background-color: var(--background-color);
 	}
 /*
 	.nav a{
@@ -449,10 +459,12 @@ label{
 		display: flex;
 		justify-content: flex-end;
 	}
+
 	nav ul li{
 		display: inline-block;
 		background: var(--background-color);
 	}
+
 	.container{
 		grid-template-columns: auto auto auto;
 	}
